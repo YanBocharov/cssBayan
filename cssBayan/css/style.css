@@ -1,45 +1,58 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+.acc {
+    font-family: 'Roboto';
+    max-width: 500px;
+    margin: 20px auto;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+.acc-mainTitle {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
 }
-html {
-	height: 100%;
+
+.acc-item {
+    border: 1px solid #d5e2d6;
+    margin-top: 30px;
 }
-body {
-	line-height: 1;
+
+.acc-input {
+    width: 0;
+    height: 0;
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    position: absolute;
 }
-ol, ul {
-	list-style: none;
+
+.acc-title {
+    display: block;
+    cursor: pointer;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all .3s ease-out;
 }
-blockquote, q {
-	quotes: none;
+
+.acc-title:hover {
+    background-color: rgb(148, 98, 98);
+    color: #fff;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+.acc-title:hover .acc-text {
+    padding-top: 20px;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+.acc-text {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    color: #000;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.acc-input:checked + .acc-text {
+    display: block;
 }
