@@ -36,14 +36,6 @@
     transition: all .3s ease-out;
 }
 
-.acc-title:hover {
-    background-color: rgb(148, 98, 98);
-    color: #fff;
-}
-.acc-title:hover .acc-text {
-    padding-top: 20px;
-}
-
 .acc-text {
     display: none;
     width: 90%;
@@ -53,6 +45,7 @@
     padding-bottom: 20px;
 }
 
-.acc-input:checked + .acc-text {
+.acc-input:hover + .acc-text {
     display: block;
+    transition: all .3s ease-out;
 }
