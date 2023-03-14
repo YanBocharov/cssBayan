@@ -1,51 +1,60 @@
-.acc {
+html {
     font-family: 'Roboto';
-    max-width: 500px;
-    margin: 20px auto;
 }
 
-.acc-mainTitle {
-    font-size: 30px;
-    text-align: center;
-    font-weight: 600;
+body {
+    background: #07141d;
 }
 
-.acc-item {
-    border: 1px solid #d5e2d6;
-    margin-top: 30px;
+#accordion {
+    margin: 100px auto;
+    width: 600px;
 }
 
-.acc-input {
-    width: 0;
-    height: 0;
-
-    -webkit-appearance: none;
-    appearance: none;
-
-    position: absolute;
+#accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
 }
 
-.acc-title {
-    display: block;
+#accordion li label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
-    color: #000;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: all .3s ease-out;
 }
 
-.acc-text {
+#accordion li label span {
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: #333;
+}
+
+.content p {
+    padding: 10px;
+}
+
+#accordion label + input[type="radio"] {
     display: none;
-    width: 90%;
-    margin: 0 auto;
-    color: #000;
-    font-size: 14px;
-    padding-bottom: 20px;
 }
 
-.acc-input:hover + .acc-text {
-    display: block;
-    transition: all .3s ease-out;
+#accordion .content {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .content {
+    max-height: 400px;
+}
+#accordion label + input[type="radio"]:checked + #accordion li label span {
+    transform: rotate(180deg);
 }
